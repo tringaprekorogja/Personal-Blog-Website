@@ -1,0 +1,13 @@
+.menu {
+	font-family: 'Baloo Bhai', cursive;
+	background-color: beige;
+	border: solid black;
+	display: flex;
+	justify-content: space-evenly;
+	padding: 20px;
+	grid-area: menu;
+}
+
+.menu a {
+	text-decoration: none;
+}

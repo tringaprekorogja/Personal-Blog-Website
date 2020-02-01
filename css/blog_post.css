@@ -1,0 +1,112 @@
+@import url("menu.css");
+@import url("footer.css");
+@import url("sidebar-font.css");
+.blog-name {
+	background-color: black;
+	font: xx-large 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	color: wheat;
+	border: solid black;
+}
+
+.avatar {
+	margin: 10px;
+	vertical-align: -webkit-baseline-middle;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+}
+
+@media (min-width: 900px) {
+	body {
+		background-color: white;
+		display: grid;
+		grid-gap: 50px;
+		grid-template-columns: repeat(4, 1fr);
+		grid-auto-rows: minmax(70px, auto);
+		grid-template-areas: "menu menu menu menu" "hd hd hd autor" "main main main sd" "ft ft ft ft";
+	}
+}
+
+@media (max-width: 375px) {
+	body {
+		background-color: white;
+		display: grid;
+		grid-gap: 10px;
+		grid-template-columns: 1fr;
+		grid-auto-rows: minmax(70px, auto);
+		grid-template-areas: "menu" "hd" "autor" "main" "sd" "ft";
+	}
+}
+
+header {
+	grid-area: hd;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	border: solid green;
+	font-family: 'Merriweather', serif;
+	background-color: black;
+	color: white;
+	margin: 15px;
+}
+
+.post-content {
+	grid-area: main;
+	padding-right: 20px;
+	font-family: 'Noto Serif', serif;
+}
+
+.sd-content {
+	grid-area: sd;
+	padding-right: 20px;
+	font-size: larger;
+	font-style: italic;
+}
+
+.footer-about {
+	grid-area: about;
+}
+
+.footer-about a {
+	color: coral;
+}
+
+.footer-contact-form {
+	grid-area: form;
+}
+
+li {
+	padding: 25px;
+	margin-bottom: 30px;
+}
+
+a {
+	text-decoration: none;
+	color: black;
+}
+
+section {
+	font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+	border: solid 3px gray;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	grid-area: autor;
+	padding: 10px;
+	margin: 15px;
+}
+
+nav {
+	grid-area: menu;
+}
+
+#footer {
+	grid-area: ft;
+}
+
+#photo {
+	width: 70%;
+	border: solid green;
+}
